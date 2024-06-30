@@ -3,26 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cipher website</title>
+    <title>Cipher Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">NEXT</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="/" class="navbar__links"> Home </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="/tech.html" class="navbar__links"> Tech </a>
-            </ul>
-        </div>
-    </nav>
+    <h1>Cipher Website</h1>
+    <p>Note: when using Playfair cipher method, avoid phrases that have back to back letters for more accurate decryption. Do not use characters outside of the alphabet.</p>
+    <label for="message"> Enter a message to be encrypted:</label>
+    <input type="text" id="message" name="message"/>
+    <label for="ciphers"><br>Choose a cipher:</label>
+    <select name="ciphers" id="ciphers">
+        <option value="Caesar"> Caesar</option>
+        <option value="Playfair"> Playfair</option>    
+    </select>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="demo"> This is a demonstration.</p>
+
+    <script src="demo.js"></script>
 </body>
 </html>
