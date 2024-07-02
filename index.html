@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cipher Website</title>
+    <title>Cipher Tool</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="ciphers.js"></script>
 </head>
 <body>
-    <h1>Cipher Website</h1>
-    <p>Note: when using Playfair cipher method, avoid phrases that have back to back letters for more accurate decryption. Do not use characters outside of the alphabet.</p>
-    <label for="message"> Enter a message to be encrypted:</label>
-    <input type="text" id="message" name="message"/>
-    <label for="ciphers"><br>Choose a cipher:</label>
-    <select name="ciphers" id="ciphers">
-        <option value="Caesar"> Caesar</option>
-        <option value="Playfair"> Playfair</option>    
-    </select>
-    <button type="button" onclick="myFunction()">Click Me!</button>
+    <div class="container">
+        <h1>Cipher Tool</h1>
+        <form id="cipher-form">
+            <label for="user-input">Enter your text:</label>
+            <input type="text" id="user-input" name="user-input" required>
 
-    <p id="demo"> This is a demonstration.</p>
+            <label for="cipher-type">Choose a cipher:</label>
+            <select id="cipher-type" name="cipher-type" required>
+                <option value="caesar">Caesar</option>
+                <option value="playfair">Playfair</option>
+            </select>
 
-    <script src="demo.js"></script>
+            <button type="submit" onclick="run()">Encrypt</button>
+        </form>
+
+        <div id="result">
+            <h2>Result:</h2>
+            <p id="output">This is a demonstration.</p>
+        </div>
+    </div>
 </body>
 </html>

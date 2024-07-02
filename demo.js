@@ -1,3 +1,4 @@
 function myFunction(){
-    document.getElementById("ciphers").innerHTML = value;
+    let x = document.getElementById("ciphers").value;
+    document.getElementById("demo").innerHTML = x;
 }
