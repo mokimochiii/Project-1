@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cipher Tool</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="ciphers.js"></script>
+    <script defer src="ciphers.js"></script>
 </head>
 <body>
     <div class="container">
@@ -20,7 +20,8 @@
                 <option value="playfair">Playfair</option>
             </select>
 
-            <button type="submit" onclick="run()">Encrypt</button>
+            <button type="button" id="encrypt-button">Encrypt</button>
+            <button type="button" id="decode-button">Decode</button>
         </form>
 
         <div id="result">

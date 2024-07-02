@@ -119,21 +119,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    document.getElementById('cipher-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-
+    function handleCipher(action) {
         let plaintext = document.getElementById("user-input").value;
         let cipherType = document.getElementById("cipher-type").value;
-        let encodedMessage;
+        let message;
 
         if (cipherType === 'caesar') {
             let caesar = new CaesarCipher();
-            encodedMessage = caesar.encode(plaintext);
+            message = action === 'encode' ? caesar.encode(plaintext) : caesar.decode(plaintext);
         } else if (cipherType === 'playfair') {
             let playfair = new Playfair();
-            encodedMessage = playfair.encode(plaintext);
+            message = action === 'encode' ? playfair.encode(plaintext) : playfair.decode(plaintext);
         }
 
-        document.getElementById("output").innerText = encodedMessage;
-    });
+        document.getElementById("output").innerText = message;
+    }
+
+    document.getElementById('encrypt-button').addEventListener('click', () => handleCipher('encode'));
+    document.getElementById('decode-button').addEventListener('click', () => handleCipher('decode'));
 });
