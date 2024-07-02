@@ -10,6 +10,7 @@ body{
 
 .container{
     background-color: #fff;
+    width: 35%;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -51,6 +52,7 @@ button:hover{
 }
 
 #output{
+    margin: auto;
     word-wrap: break-word;
     text-align: center;
     font-weight: bold;
